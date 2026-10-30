@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamically inject an "Order on WhatsApp" button into each product card 
     // to keep your original HTML untouched while adding this feature.
     const productInfos = document.querySelectorAll('.product-info');
-    const whatsappNumber = '+923324185675';
+    const whatsappNumber = '923324185675';
 
     productInfos.forEach(info => {
         const productName = info.querySelector('h4').innerText;
