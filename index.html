@@ -1,0 +1,241 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEWEL SPOT | Timeless Elegance</title>
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR -->
+    <!-- ========================================== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="logo">JEWEL SPOT</a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#products">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Action Icons -->
+            <div class="nav-icons">
+                <a href="#" aria-label="Search">🔍</a>
+                <a href="#" aria-label="Cart">🛍️ <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION -->
+    <!-- ========================================== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Timeless Elegance, Modern Grace</span>
+            <h1>Gilded Details for the Modern Muse</h1>
+            <p>Discover delicate craftsmanship and everyday luxury designed to make every moment sparkle.</p>
+            <a href="#collections" class="btn-primary">Shop Collections</a>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- COLLECTIONS SECTION (4 Categories) -->
+    <!-- ========================================== -->
+    <section id="collections" class="collections-section">
+        <div class="section-header">
+            <h2>Explore Our Collections</h2>
+            <p>Curated pieces designed to elevate your personal style</p>
+        </div>
+
+        <div class="collections-grid">
+            <!-- Category 1 -->
+            <div class="collection-card">
+                <img src="vintage-bracelets.jpg" alt="Vintage Golden Bracelets">
+                <div class="collection-overlay">
+                    <h3>Vintage Golden Bracelets</h3>
+                    <a href="#products" class="btn-text">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="collection-card">
+                <img src="pearl-bracelets.jpg" alt="Pearl Bracelets">
+                <div class="collection-overlay">
+                    <h3>Pearl Bracelets</h3>
+                    <a href="#products" class="btn-text">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="collection-card">
+                <img src="rings.jpg" alt="Rings">
+                <div class="collection-overlay">
+                    <h3>Rings</h3>
+                    <a href="#products" class="btn-text">Explore &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="collection-card">
+                <img src="necklaces.jpg" alt="Necklaces & Pendants">
+                <div class="collection-overlay">
+                    <h3>Necklaces & Pendants</h3>
+                    <a href="#products" class="btn-text">Explore &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FEATURED PRODUCTS SECTION WITH FILTERS -->
+    <!-- ========================================== -->
+    <section id="products" class="products-section">
+        <div class="section-header">
+            <h2>Featured Pieces</h2>
+            <p>Find your new favorite accessory</p>
+        </div>
+
+        <!-- Filter Buttons for JavaScript Interactivity -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+            <button class="filter-btn" data-filter="rings">Rings</button>
+            <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <!-- Product Item 1 -->
+            <div class="product-card" data-category="bracelets">
+                <div class="product-img-wrapper">
+                    <img src="vintage-bracelets.jpg" alt="Golden Charm Bracelet">
+                </div>
+                <div class="product-info">
+                    <h4>Golden Clover Stack</h4>
+                    <span class="price">$45.00</span>
+                    <button class="btn-secondary">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="product-card" data-category="bracelets">
+                <div class="product-img-wrapper">
+                    <img src="pearl-bracelets.jpg" alt="Classic Pearl Bracelet">
+                </div>
+                <div class="product-info">
+                    <h4>Lustrous Pearl Strand</h4>
+                    <span class="price">$38.00</span>
+                    <button class="btn-secondary">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="product-card" data-category="rings">
+                <div class="product-img-wrapper">
+                    <img src="rings.jpg" alt="Dainty Bow Ring">
+                </div>
+                <div class="product-info">
+                    <h4>Dainty Bow Gold Ring</h4>
+                    <span class="price">$28.00</span>
+                    <button class="btn-secondary">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="product-card" data-category="necklaces">
+                <div class="product-img-wrapper">
+                    <img src="necklaces.jpg" alt="Pearl Pendant Necklace">
+                </div>
+                <div class="product-info">
+                    <h4>Solitaire Pearl Pendant</h4>
+                    <span class="price">$52.00</span>
+                    <button class="btn-secondary">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- ABOUT SECTION -->
+    <!-- ========================================== -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Small Details, Big Happiness</h2>
+                <p>At JEWEL SPOT, we believe that everyday luxury should be accessible, durable, and breathtakingly beautiful. Each piece in our collection is thoughtfully crafted to bring effortless sophistication to your daily wardrobe.</p>
+                <p>Designed with care, polished to perfection—our tarnish-resistant finishes ensure your favorite pieces stay radiant day after day.</p>
+            </div>
+            <div class="about-image">
+                <img src="rings.jpg" alt="JEWEL SPOT Lifestyle">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- NEWSLETTER / CONTACT SECTION -->
+    <!-- ========================================== -->
+    <section id="contact" class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Join the Inner Circle</h2>
+            <p>Subscribe to receive updates on private drops, styling tips, and 10% off your first order.</p>
+            
+            <form id="newsletter-form">
+                <input type="email" id="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+            <p id="form-message" class="success-message"></p>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>JEWEL SPOT</h3>
+                <p>Elevating your everyday style with timeless golden details and delicate craftsmanship.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Jewellery Care Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JEWEL SPOT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+```
