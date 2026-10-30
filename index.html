@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
@@ -24,8 +25,8 @@
         <div class="nav-container">
 
             <a href="index.html" class="logo">
-    <img src="brand-logo.png" alt="JEWEL SPOT Logo">
-</a>
+                <img src="brand-logo.png" alt="JEWEL SPOT Logo">
+            </a>
 
             <nav class="nav-links">
                 <a href="#home">Home</a>
@@ -37,8 +38,13 @@
 
             <div class="nav-icons">
                 <a href="#products" aria-label="Search">🔍</a>
-                <a href="#products" aria-label="Cart">
+
+                <a href="#" id="cart-button" aria-label="Shopping Cart">
                     🛍️ <span id="cart-count">0</span>
+                </a>
+
+                <a href="#" id="favorites-button" aria-label="Favourites">
+                    ♡ <span id="favorites-count">0</span>
                 </a>
             </div>
 
@@ -92,7 +98,6 @@
                 </div>
             </div>
 
-
             <div class="collection-card">
                 <img src="pearl-bracelets.jpg" alt="Pearl Bracelets">
 
@@ -102,7 +107,6 @@
                 </div>
             </div>
 
-
             <div class="collection-card">
                 <img src="rings.jpg" alt="Rings">
 
@@ -111,7 +115,6 @@
                     <a href="#products" class="btn-text">Explore &rarr;</a>
                 </div>
             </div>
-
 
             <div class="collection-card">
                 <img src="necklaces.jpg" alt="Necklaces and Pendants">
@@ -183,6 +186,11 @@
                         Add to Bag
                     </button>
 
+                    <button class="favorite-toggle" type="button"
+                        aria-label="Add to favourites" aria-pressed="false">
+                        ♡
+                    </button>
+
                 </div>
 
             </div>
@@ -204,6 +212,11 @@
 
                     <button class="btn-secondary">
                         Add to Bag
+                    </button>
+
+                    <button class="favorite-toggle" type="button"
+                        aria-label="Add to favourites" aria-pressed="false">
+                        ♡
                     </button>
 
                 </div>
@@ -229,6 +242,11 @@
                         Add to Bag
                     </button>
 
+                    <button class="favorite-toggle" type="button"
+                        aria-label="Add to favourites" aria-pressed="false">
+                        ♡
+                    </button>
+
                 </div>
 
             </div>
@@ -250,6 +268,11 @@
 
                     <button class="btn-secondary">
                         Add to Bag
+                    </button>
+
+                    <button class="favorite-toggle" type="button"
+                        aria-label="Add to favourites" aria-pressed="false">
+                        ♡
                     </button>
 
                 </div>
@@ -416,6 +439,7 @@
                     <li><a href="#contact">Shipping & Returns</a></li>
                     <li><a href="#contact">Jewellery Care Guide</a></li>
                     <li><a href="#contact">FAQs</a></li>
+
                     <li>
                         <a href="mailto:suhainaahsan1620@gmail.com">
                             Contact Us
@@ -435,6 +459,112 @@
         </div>
 
     </footer>
+
+
+    <!-- SHOPPING CART PANEL -->
+
+    <div id="cart-overlay" class="shop-overlay" aria-hidden="true">
+
+        <section class="shop-panel" role="dialog" aria-modal="true"
+            aria-labelledby="cart-heading">
+
+            <div class="shop-panel-header">
+
+                <h2 id="cart-heading">Your Shopping Bag</h2>
+
+                <button type="button" class="panel-close"
+                    data-close-panel aria-label="Close cart">
+                    &times;
+                </button>
+
+            </div>
+
+            <div id="cart-items" class="shop-items">
+
+                <p class="empty-state">
+                    Your bag is currently empty.
+                </p>
+
+            </div>
+
+            <div class="cart-summary">
+
+                <p>
+                    <span>Subtotal</span>
+                    <strong id="cart-total">Rs. 0</strong>
+                </p>
+
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+
+                <h3>Delivery Details</h3>
+
+                <label for="customer-name">Full name</label>
+
+                <input id="customer-name" name="name"
+                    type="text" autocomplete="name" required>
+
+
+                <label for="customer-phone">Phone number</label>
+
+                <input id="customer-phone" name="phone"
+                    type="tel" autocomplete="tel" required>
+
+
+                <label for="customer-address">Delivery address</label>
+
+                <textarea id="customer-address" name="address"
+                    autocomplete="street-address" rows="3" required></textarea>
+
+
+                <label for="customer-notes">
+                    Additional instructions (optional)
+                </label>
+
+                <textarea id="customer-notes" name="notes" rows="2"></textarea>
+
+
+                <button type="submit" class="btn-primary">
+                    Order on WhatsApp
+                </button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+    <!-- FAVOURITES PANEL -->
+
+    <div id="favorites-overlay" class="shop-overlay" aria-hidden="true">
+
+        <section class="shop-panel" role="dialog" aria-modal="true"
+            aria-labelledby="favorites-heading">
+
+            <div class="shop-panel-header">
+
+                <h2 id="favorites-heading">Your Favourites</h2>
+
+                <button type="button" class="panel-close"
+                    data-close-panel aria-label="Close favourites">
+                    &times;
+                </button>
+
+            </div>
+
+            <div id="favorites-items" class="shop-items">
+
+                <p class="empty-state">
+                    You haven't saved any favourites yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
 
 
     <!-- JAVASCRIPT -->
